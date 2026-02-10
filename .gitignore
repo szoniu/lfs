@@ -1,0 +1,10 @@
+*.tar
+*.tar.*
+*.log
+*.log.*
+*.sig
+*.patch
+.claude/
+/venv/
+.idea/
+/sources/

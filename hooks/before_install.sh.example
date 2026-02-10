@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Example hook: before_install
+# This script runs before the installation begins.
+# Rename to before_install.sh and make executable to activate.
+
+echo "Custom pre-install hook running..."
+# Add your custom logic here

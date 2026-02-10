@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+# lfs.conf.example — Example configuration for the LFS TUI Installer
+# Copy this file and modify as needed, then load with:
+#   ./install.sh --config ./my-lfs.conf --install
+
+# ============================================================
+# Disk configuration
+# ============================================================
+
+# Target disk (auto-detected during wizard)
+# TARGET_DISK='/dev/sda'
+
+# Partition scheme: auto, dual-boot, manual
+PARTITION_SCHEME='auto'
+
+# Root filesystem: ext4, btrfs, xfs
+FILESYSTEM='ext4'
+
+# Btrfs subvolumes (only if FILESYSTEM=btrfs)
+# Format: name:mountpoint pairs, colon-separated
+# BTRFS_SUBVOLUMES='@:/:@home:/home:@var-log:/var/log:@snapshots:/.snapshots'
+BTRFS_SUBVOLUMES=''
+
+# ============================================================
+# Swap configuration
+# ============================================================
+
+# Swap type: zram (recommended), partition, file, none
+SWAP_TYPE='zram'
+
+# Swap size in MiB (for partition/file type)
+SWAP_SIZE_MIB=''
+
+# ============================================================
+# System configuration
+# ============================================================
+
+HOSTNAME='lfs'
+TIMEZONE='Europe/Warsaw'
+LOCALE='en_US.UTF-8'
+KEYMAP='us'
+
+# ============================================================
+# Kernel configuration
+# ============================================================
+
+# Kernel config: defconfig, custom (menuconfig), or path to .config file
+KERNEL_CONFIG='defconfig'
+
+# Build parallelism (auto-detected from CPU cores)
+# MAKEFLAGS='-j8'
+
+# ============================================================
+# User configuration
+# ============================================================
+
+# Root password hash (generated during wizard)
+# ROOT_PASSWORD_HASH='...'
+
+# Regular user
+USERNAME='user'
+# USER_PASSWORD_HASH='...'
+USER_GROUPS='wheel,audio,video,input'
+
+# ============================================================
+# Optional features
+# ============================================================
+
+# Enable SSH (requires building OpenSSH from BLFS)
+ENABLE_SSH='no'
+
+# Extra BLFS packages to note for post-boot installation
+EXTRA_PACKAGES=''
+
+# ============================================================
+# Network (for static IP, leave empty for DHCP)
+# ============================================================
+# NETWORK_IP=''
+# NETWORK_GATEWAY=''
+# NETWORK_DNS=''
+# NETWORK_IFACE=''
+
+# ============================================================
+# Dual-boot (auto-detected during wizard)
+# ============================================================
+# ESP_PARTITION=''
+# ESP_REUSE='no'
+# ROOT_PARTITION=''
+# SWAP_PARTITION=''
+# BOOT_PARTITION=''
