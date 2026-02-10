@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Example hook: after_install
+# This script runs after the installation completes.
+# Rename to after_install.sh and make executable to activate.
+
+echo "Custom post-install hook running..."
+# Add your custom logic here
